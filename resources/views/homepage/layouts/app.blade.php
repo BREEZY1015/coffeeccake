@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Yummy Bootstrap Template - Index</title>
+  <title>CoffeeCaepCake</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon.jpg" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -61,6 +61,8 @@
       <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=sweet-hipster">
         <h1>CoffeeCaepCake<span>.</span></h1>
       </a>
             <nav id="navbar" class="navbar">
@@ -69,7 +71,7 @@
           <li><a href="#about">About-Us</a></li>
           <li><a href="#menu">Products</a></li>
           <li><a href="#events">Announcements</a></li>
-          <li><a href="#chefs">Owner</a></li>
+          {{-- <li><a href="#book-a-table">Owner</a></li> --}}
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>

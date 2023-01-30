@@ -10,15 +10,6 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
 
-                    <h1>Thank you for logging in {{Auth::user ()->name}}</h1> 
-                    {{-- @foreach(auth()->user()->notifications as $notifications)
-
-                    <div class="bg-blue-300 p-3 m-2">
-                       <b> {{ $notifications->data['name']}}</b> Followed you!!!
-                      
-                    </div>
-                    @endforeach --}}
-
                 </div>
             </div>
         </div>
