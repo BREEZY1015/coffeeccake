@@ -25,6 +25,17 @@ class UserController extends Controller
         ]);
     }
 
+    public function update_view($id)
+    {
+        $user = User::find($id);
+
+        return view('users.form', [
+            'header'    => 'Update User',
+            'users'     => $users
+        ]);
+    }
+
+
     public function store(Request $request)
     {
        // For Validation
@@ -71,15 +82,17 @@ class UserController extends Controller
 
         session()->flash('status', 'Updated User Successfully!');
 
-        return redirect('/users/update/' . $user->id);
+        return redirect('/users ');
     }
 
-    public function destroy(Request $request, $id)
+    public function delete(Request $request, $id)
     {
         $user = User::findOrFail($id);
 
-        if($user->delete())
-            return redirect($user);
+        $user->delete();
+
+        return redirect('/users');
+           
     }
 
     public function notify() {
@@ -90,8 +103,5 @@ class UserController extends Controller
         auth()->user()->notify(new UserNotification($user));
         }
         dd('done');
-    }
-    public function markasread($id) {
-        dd($id);
     }
 }

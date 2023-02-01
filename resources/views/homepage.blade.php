@@ -465,6 +465,18 @@
               </p>
             </div><!-- End Event item -->
 
+            {{-- @foreach ($announcements as $announcement)
+              <div class="swiper-slide event-item d-flex flex-column justify-content-end">
+                <img class="announcement-image" src="{{asset('/storage/images'. $announcement->image)}}" alt="#">
+                <h3></h3>
+                <div class="price align-self-start"></div>
+                <p class="description">
+                 
+                </p>
+              </div><!-- End Event item -->
+
+            @endforeach --}}
+
           </div>
           <div class="swiper-pagination"></div>
         </div>
