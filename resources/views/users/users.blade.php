@@ -46,10 +46,10 @@
                                         <a href="{{ url('/users/update/' . $user->id) }}">
                                             <button class="rounded-full bg-blue-500 p-1 hover:bg-blue-700" title="edit user">Update</button>
                                         </a>
-                                        {{-- <a href="{{ url('/users/password/' . $user->id) }}">
-                                            <button class="rounded-full bg-sky-500 p-1 hover:bg-sky-700"title="change password">Password</button>
+                                        {{-- <a href="{{ url('/users/change-password' . $user->id) }}">
+                                            <button class="rounded-full bg-sky-500 p-1    hover:bg-sky-700"title="Dili mugana">Password</button>
                                         </a> --}}
-                                        <a href="{{ url('/users/delete/' . $user->id) }}">
+                                        <a href="{{ url('/delete' . $user->id) }}">
                                             <button type="submit" class="rounded-full bg-red-500 p-1 hover:bg-red-700"title="delete user">Delete</button>
                                         </a>
                                     </td>
