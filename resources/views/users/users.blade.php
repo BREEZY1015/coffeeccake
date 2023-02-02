@@ -2,7 +2,12 @@
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('Users') }}
+            <a class="nav-link" href="{{url ('/dashboard') }}">
+                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                Dashboard
+            </a>
         </h2>
+        
     </x-slot>
 
     <div class="py-12">
@@ -49,7 +54,7 @@
                                         {{-- <a href="{{ url('/users/change-password' . $user->id) }}">
                                             <button class="rounded-full bg-sky-500 p-1    hover:bg-sky-700"title="Dili mugana">Password</button>
                                         </a> --}}
-                                        <a href="{{ url('/delete' . $user->id) }}">
+                                        <a href="{{ url('/users/delete/' . $user->id) }}">
                                             <button type="submit" class="rounded-full bg-red-500 p-1 hover:bg-red-700"title="delete user">Delete</button>
                                         </a>
                                     </td>

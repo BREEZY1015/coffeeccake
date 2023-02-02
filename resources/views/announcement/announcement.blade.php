@@ -2,7 +2,14 @@
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('announcement') }}
+            
+            <a class="nav-link" href="{{url ('/dashboard') }}">
+                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                Dashboard
+            </a>
+        
         </h2>
+        
     </x-slot>
 
     <div class="py-12">

@@ -177,6 +177,8 @@
             </a>
           </li><!-- End tab nav item -->
 
+          
+
           {{-- <li class="nav-item">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-breakfast">
               <h4>Wedding</h4>
@@ -441,42 +443,26 @@
         <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
           <div class="swiper-wrapper">
 
-            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(assets/img/Announce-1.jpg)">
-              <h3></h3>
-              <div class="price align-self-start"></div>
-              <p class="description">
-                {{-- Quo corporis voluptas ea ad. Consectetur inventore sapiente ipsum voluptas eos omnis facere. Enim facilis veritatis id est rem repudiandae nulla expedita quas. --}}
-              </p>
-            </div><!-- End Event item -->
+            @foreach ($announcements as $announcement)
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(storage/images/{{$announcement->image}})">
+              <h3>{{$announcement->header}}</h3>
+              <div class="price align-self-start">{{$announcement->sub_header}}</div>
+              <p class="description">{{$announcement->description}}</p>
+            </div>
+            @endforeach
 
-            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(assets/img/Announce-2.jpg)">
-              <h3></h3>
-              <div class="price align-self-start"></div>
-              <p class="description">
-                {{-- In delectus sint qui et enim. Et ab repudiandae inventore quaerat doloribus. Facere nemo vero est ut dolores ea assumenda et. Delectus saepe accusamus aspernatur. --}}
-              </p>
-            </div><!-- End Event item -->
+            <div class="slides-4 swiper" data-aos="fade-up" data-aos-delay="100">
+              <div class="swiper-wrapper">
+    
+                @foreach ($announcements as $announcement)
+                <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(storage/images/{{$announcement->image}})">
+                  <h3>{{$announcement->header}}</h3>
+                  <div class="price align-self-start">{{$announcement->sub_header}}</div>
+                  <p class="description">{{$announcement->description}}</p>
+                </div>
+                @endforeach
 
-            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(assets/img/Announce-3.jpg)">
-              <h3></h3>
-              <div class="price align-self-start"></div>
-              <p class="description">
-                {{-- Laborum aperiam atque omnis minus omnis est qui assumenda quos. Quis id sit quibusdam. Esse quisquam ducimus officia ipsum ut quibusdam maxime. Non enim perspiciatis. --}}
-              </p>
-            </div><!-- End Event item -->
-
-            {{-- @foreach ($announcements as $announcement)
-              <div class="swiper-slide event-item d-flex flex-column justify-content-end">
-                <img class="announcement-image" src="{{asset('/storage/images'. $announcement->image)}}" alt="#">
-                <h3></h3>
-                <div class="price align-self-start"></div>
-                <p class="description">
-                 
-                </p>
-              </div><!-- End Event item -->
-
-            @endforeach --}}
-
+    
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -765,7 +751,7 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+   
       </div>
     </div>
 

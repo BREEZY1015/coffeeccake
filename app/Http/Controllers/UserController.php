@@ -85,11 +85,12 @@ class UserController extends Controller
         return redirect('/users ');
     }
 
-    public function delete(Request $request, $id)
+    public function delete($id)
     {
-        $user = User::findOrFail($id);
-
+        $user = User::find($id);
         $user->delete();
+
+        $user->delete($id);
 
         return redirect('/users');
            
@@ -104,4 +105,33 @@ class UserController extends Controller
         }
         dd('done');
     }
+
+//     public function changePassword()
+// {
+//    return redirect('/users');
+// }
+// public function updatePassword(Request $request, $id)
+// {
+//         # Validation
+//         $request->validate([
+//             'old_password' => 'required',
+//             'new_password' => 'required|confirmed',
+//         ]);
+
+//         $user = User::find($id);
+//         #$user->updatePassword();
+//         #Match The Old Password
+//         if(!Hash::check($request->old_password, auth()->user()->password)){
+//             return back()->with("error", "Old Password Doesn't match!");
+//         }
+
+
+//         #Update the new Password
+//         $user->updatePassword([
+//             'password' => Hash::make($request->new_password)
+//         ]);
+
+//         return back()->with("status", "Password changed successfully!");
+// }
+
 }

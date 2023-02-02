@@ -17,11 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('/', Pagescontroller::class);
-
-Route::get('/', function () {
-    return view('homepage');
-});
+Route::get('/', [Pagescontroller::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

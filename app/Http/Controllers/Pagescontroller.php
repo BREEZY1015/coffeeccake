@@ -15,7 +15,7 @@ class Pagescontroller extends Controller
     public function index()
     {
         $announcements = Announcement::all();
-        return view('resources.views.homepage', ['announcement' => $announcements]);
+        return view('homepage', ['announcements' => $announcements]);
     }
 
     /**
